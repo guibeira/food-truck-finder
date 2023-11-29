@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
   libc-dev\
   g++\
   gcc\
+  gdal-bin\
   libgl1-mesa-dev
 
 WORKDIR /app
