@@ -1,5 +1,5 @@
 """
-ASGI config for truck_food_finder project.
+ASGI config for food_truck_finder project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "truck_food_finder.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "food_truck_finder.settings")
 
 application = get_asgi_application()

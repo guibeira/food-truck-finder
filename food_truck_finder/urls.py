@@ -1,5 +1,5 @@
 """
-URL configuration for truck_food_finder project.
+URL configuration for food_truck_finder project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
