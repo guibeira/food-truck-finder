@@ -20,6 +20,6 @@ ENV PYCURL_SSL_LIBRARY=openssl
 RUN pip install --upgrade pip poetry
 
 COPY pyproject.toml poetry.lock ./
-RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
+RUN poetry export --dev -f requirements.txt --output requirements.txt --without-hashes
 RUN pip install -r requirements.txt
 

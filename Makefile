@@ -7,6 +7,15 @@ build:
 run:
 	docker compose up
 
+lock:
+	poetry lock
+
+install:
+	poetry install
+
+test:
+	docker compose run --rm -e LC_ALL=C.UTF-8 -e LANG=C.UTF-8 --user="$(USER_ID):$(GROUP_ID)" web bash -c "pytest --cov"
+
 migrate: 
 	docker compose run --rm -e LC_ALL=C.UTF-8 -e LANG=C.UTF-8 --user="$(USER_ID):$(GROUP_ID)" web python manage.py migrate
 

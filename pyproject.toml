@@ -14,6 +14,25 @@ psycopg2-binary = "^2.9.9"
 dj-database-url = "^2.1.0"
 
 
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+pytest-django = "^4.7.0"
+django-coverage-plugin = "^3.1.0"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "food_truck_finder.settings"
+
+[tool.coverage.run]
+plugins = [ 'django_coverage_plugin', ]
+omit = [
+    "*/.venv/*",
+    "wsgi.py",
+    "asgi.py",
+    "urls.py",
+    "apps.py",
+    "manage.py",
+    ]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

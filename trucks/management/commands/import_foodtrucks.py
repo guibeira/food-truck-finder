@@ -17,8 +17,8 @@ class Command(BaseCommand):
             reader = csv.DictReader(csvfile)
             for row in reader:
                 FoodTruck.objects.create(
-                    name=row["Applicant"],
-                    facility_type=row["FacilityType"],
+                    name=row["Applicant"].strip(),
+                    facility_type=row["FacilityType"].strip(),
                     location=Point(float(row["Longitude"]), float(row["Latitude"])),
                     address=row["Address"],
                 )
